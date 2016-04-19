@@ -58,25 +58,8 @@ namespace AmsApp.Controllers
         // GET: /User/Json/5
         public ViewResult Json(int id)
         {
-
-           
-
-
             User user = db.Users.Find(id);
-
-            if (!user.Equals(null))
-            {
-                //Console.Write(user);
-                //return View(user);
-                // var json = new JavaScriptSerializer().Serialize(user);
-                return View(user);
-            }
-
-            else
-            {
-
-                return null;
-            }
+            return View(user);
         }
 
 
