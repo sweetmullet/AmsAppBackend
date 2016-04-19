@@ -56,8 +56,12 @@ namespace AmsApp.Controllers
 
         //
         // GET: /User/Json/5
-        public ActionResult Json(int id)
+        public ViewResult Json(int id)
         {
+
+           
+
+
             User user = db.Users.Find(id);
 
             if (!user.Equals(null))
