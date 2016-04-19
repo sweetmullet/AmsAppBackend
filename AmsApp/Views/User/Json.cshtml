@@ -9,27 +9,24 @@
 <fieldset>
     <legend>User</legend>
 
-    <div class="display-label">FirstName</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FirstName)
-    </div>
+    <h2>Json</h2>
+    <div><p>
+    {"User":[
+    {"firstName":"@Html.DisplayFor(model => model.FirstName)", 
+    "LastName":"@Html.DisplayFor(model => model.LastName)",
+    "Email":"@Html.DisplayFor(model => model.Email)",
+     "RoleId":"@Html.DisplayFor(model => model.RoleId)"
+        }
+]}
 
-    <div class="display-label">LastName</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.LastName)
-    </div>
+         </p></div>
 
-    <div class="display-label">Email</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email)
-    </div>
 
-    <div class="display-label">RoleId</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.RoleId)
-    </div>
+   
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.UserId }) |
+    
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
