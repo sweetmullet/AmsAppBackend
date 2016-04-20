@@ -56,10 +56,45 @@ namespace AmsApp.Controllers
 
         //
         // GET: /User/Json/5
-        public ViewResult Json(int id)
+
+
+        public System.Web.Mvc.JsonResult Json(int id)
         {
-            User user = db.Users.Find(id);
-            return View(user);
+            if (id == 0)
+            {
+
+               // var resultCount = results.Count;
+               // var genericResult = new { Count = resultCount, Results = results };
+                //return Json(genericResult);
+                String allUsers = "";
+                List<User> userList = new List<User>();
+                userList = db.Users.ToList();
+                User user = db.Users.Find(1);
+                String firstName;
+                String lastName;
+                String email;
+                int roleId;
+
+                //return Json(new { firstName = user.FirstName, lastName = user.LastName, roleId = user.RoleId, email = user.Email }, JsonRequestBehavior.AllowGet);
+
+                foreach (User user2 in userList)
+                {
+                    firstName = user2.FirstName;
+                    lastName = user2.LastName;
+                    email = user2.Email;
+                    roleId = user2.RoleId;
+                    //return Json(new { firstName = user2.FirstName, lastName = user2.LastName, roleId = user2.RoleId, email = user2.Email }, JsonRequestBehavior.AllowGet);
+                    allUsers = allUsers + "{ firstName = " + firstName + ", lastName = " + lastName + ", roleId = " + roleId + ", email = " + email + " }";
+                }
+                return Json(new { fullUserString = allUsers }, JsonRequestBehavior.AllowGet);
+            }
+
+            else
+            {
+                User user = db.Users.Find(id);
+                //return View(user);
+                return Json(new { firstName = user.FirstName, lastName = user.LastName, roleId = user.RoleId, email = user.Email }, JsonRequestBehavior.AllowGet);
+            }
         }
 
 
