@@ -34,7 +34,6 @@ D:\Senior Project FIles\AmsAppRepo\AmsApp\bin\System.Web.Routing.dll
 D:\Senior Project FIles\AmsAppRepo\AmsApp\bin\System.Web.WebPages.Deployment.dll
 D:\Senior Project FIles\AmsAppRepo\AmsApp\bin\System.Web.WebPages.dll
 D:\Senior Project FIles\AmsAppRepo\AmsApp\bin\System.Web.WebPages.Razor.dll
-D:\Senior Project FIles\AmsAppRepo\AmsApp\bin\EntityFramework.xml
 D:\Senior Project FIles\AmsAppRepo\AmsApp\obj\Debug\AmsApp.dll
 D:\Senior Project FIles\AmsAppRepo\AmsApp\obj\Debug\AmsApp.pdb
 D:\Senior Project FIles\AmsAppRepo\AmsApp\obj\Debug\AmsApp.csprojResolveAssemblyReference.cache
