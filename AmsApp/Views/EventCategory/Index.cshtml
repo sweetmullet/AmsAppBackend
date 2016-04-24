@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AmsApp.Models.EventCategories>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            CategoryId
+        </th>
+        <th>
+            EventId
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventCategoriesId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventCategoriesId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventCategoriesId })
+        </td>
+    </tr>
+}
+
+</table>

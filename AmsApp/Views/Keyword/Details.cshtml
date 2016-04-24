@@ -1,0 +1,25 @@
+﻿@model AmsApp.Models.Keyword
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Keyword</legend>
+
+    <div class="display-label">AbstractId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbstractId)
+    </div>
+
+    <div class="display-label">KeywordString</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KeywordString)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.KeywordId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

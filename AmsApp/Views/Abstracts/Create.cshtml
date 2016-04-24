@@ -1,0 +1,89 @@
+﻿@model AmsApp.Models.Abstracts
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Abstracts</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AbstractTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AbstractTitle)
+            @Html.ValidationMessageFor(model => model.AbstractTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AbstractBody)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AbstractBody)
+            @Html.ValidationMessageFor(model => model.AbstractBody)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsReviewedInd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsReviewedInd)
+            @Html.ValidationMessageFor(model => model.IsReviewedInd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventId)
+            @Html.ValidationMessageFor(model => model.EventId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SubmitterFirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubmitterFirstName)
+            @Html.ValidationMessageFor(model => model.SubmitterFirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SubmitterLastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubmitterLastName)
+            @Html.ValidationMessageFor(model => model.SubmitterLastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SubmitterEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubmitterEmail)
+            @Html.ValidationMessageFor(model => model.SubmitterEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SubmissionTypeId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubmissionTypeId)
+            @Html.ValidationMessageFor(model => model.SubmissionTypeId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

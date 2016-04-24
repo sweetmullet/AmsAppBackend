@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AmsApp.Models.AssociatedAuthors>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            AbstractId
+        </th>
+        <th>
+            AuthorId
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbstractId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AssociatedAuthorsId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AssociatedAuthorsId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AssociatedAuthorsId })
+        </td>
+    </tr>
+}
+
+</table>

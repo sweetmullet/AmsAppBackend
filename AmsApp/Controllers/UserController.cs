@@ -45,14 +45,14 @@ namespace AmsApp.Controllers
         public ActionResult Create(string firstName, string lastName, string email, int roleId)
         {
 
-    //Create a product and a relationship to a known category by ID 
-    User user = new User 
-    { 
-        FirstName = firstName,
-        LastName = lastName, 
-        Email = email,
-        RoleId = roleId
-    };  
+         //Create a product and a relationship to a known category by ID 
+           User user = new User 
+             { 
+               FirstName = firstName,
+                LastName = lastName, 
+                 Email = email,
+                 RoleId = roleId
+                 };  
 
             if (ModelState.IsValid)
             {
