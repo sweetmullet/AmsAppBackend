@@ -42,16 +42,16 @@ namespace AmsApp.Controllers
         // POST: /User/Create
 
         [HttpPost]
-        public ActionResult Create(string firstName, string lastName, string email, int roleId)
+        public ActionResult Create(string FirstName, string LastName, string Email, int RoleId)
         {
 
          //Create a product and a relationship to a known category by ID 
            User user = new User 
              { 
-               FirstName = firstName,
-                LastName = lastName, 
-                 Email = email,
-                 RoleId = roleId
+               FirstName = FirstName,
+                LastName = LastName, 
+                 Email = Email,
+                 RoleId = RoleId
                  };  
 
             if (ModelState.IsValid)
