@@ -71,7 +71,7 @@ namespace AmsApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(views).State = EntityState.Modified;
+                db.Entry(views).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
