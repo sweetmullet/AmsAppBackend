@@ -33,7 +33,7 @@ namespace AmsApp.Controllers
         //
         // GET: /User/Create
 
-        public ActionResult Create()
+        public ActionResult Create2()
         {
             return View();
         } 
