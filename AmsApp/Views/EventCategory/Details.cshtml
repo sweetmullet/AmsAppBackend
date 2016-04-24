@@ -1,0 +1,25 @@
+﻿@model AmsApp.Models.EventCategories
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EventCategories</legend>
+
+    <div class="display-label">CategoryId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CategoryId)
+    </div>
+
+    <div class="display-label">EventId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EventCategoriesId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

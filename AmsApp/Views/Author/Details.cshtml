@@ -1,0 +1,25 @@
+﻿@model AmsApp.Models.Author
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Author</legend>
+
+    <div class="display-label">AuthorFirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorFirstName)
+    </div>
+
+    <div class="display-label">AuthorLastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorLastName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AuthorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,20 @@
+﻿@model AmsApp.Models.Operation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Actions</legend>
+
+    <div class="display-label">ActionDesc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OperationDesc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ActionsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

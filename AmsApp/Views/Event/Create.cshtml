@@ -1,0 +1,41 @@
+﻿@model AmsApp.Models.Events
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Events</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventCity)
+            @Html.ValidationMessageFor(model => model.EventCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventTitle)
+            @Html.ValidationMessageFor(model => model.EventTitle)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

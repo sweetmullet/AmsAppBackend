@@ -1,0 +1,25 @@
+﻿@model AmsApp.Models.Role
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Role</legend>
+
+    <div class="display-label">RoleTitle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleTitle)
+    </div>
+
+    <div class="display-label">RoleActiveInd</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleActiveInd)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RoleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

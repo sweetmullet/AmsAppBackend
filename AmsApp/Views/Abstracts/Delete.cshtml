@@ -1,0 +1,58 @@
+﻿@model AmsApp.Models.Abstracts
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Abstracts</legend>
+
+    <div class="display-label">AbstractTitle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbstractTitle)
+    </div>
+
+    <div class="display-label">AbstractBody</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbstractBody)
+    </div>
+
+    <div class="display-label">IsReviewedInd</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsReviewedInd)
+    </div>
+
+    <div class="display-label">EventId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventId)
+    </div>
+
+    <div class="display-label">SubmitterFirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterFirstName)
+    </div>
+
+    <div class="display-label">SubmitterLastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterLastName)
+    </div>
+
+    <div class="display-label">SubmitterEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterEmail)
+    </div>
+
+    <div class="display-label">SubmissionTypeId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmissionTypeId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

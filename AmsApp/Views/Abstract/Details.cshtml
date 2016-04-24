@@ -1,0 +1,55 @@
+﻿@model AmsApp.Models.Abstract
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Abstract</legend>
+
+    <div class="display-label">AbstractTitle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbstractTitle)
+    </div>
+
+    <div class="display-label">AbstractBody</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbstractBody)
+    </div>
+
+    <div class="display-label">IsReviewedInd</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsReviewedInd)
+    </div>
+
+    <div class="display-label">EventId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventId)
+    </div>
+
+    <div class="display-label">SubmitterFirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterFirstName)
+    </div>
+
+    <div class="display-label">SubmitterLastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterLastName)
+    </div>
+
+    <div class="display-label">SubmitterEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmitterEmail)
+    </div>
+
+    <div class="display-label">SubmissionTypeId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubmissionTypeId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AbstractId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
