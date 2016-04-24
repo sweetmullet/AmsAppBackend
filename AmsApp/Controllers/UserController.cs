@@ -42,13 +42,23 @@ namespace AmsApp.Controllers
         // POST: /User/Create
 
         [HttpPost]
-        public ActionResult Create(User user)
+        public ActionResult Create(string firstName, string lastName, string email, int roleId)
         {
+
+    //Create a product and a relationship to a known category by ID 
+    User user = new User 
+    { 
+        FirstName = firstName,
+        LastName = lastName, 
+        Email = email,
+        RoleId = roleId
+    };  
+
             if (ModelState.IsValid)
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index");
             }
 
             return View(user);
@@ -86,7 +96,7 @@ namespace AmsApp.Controllers
                     //return Json(new { firstName = user2.FirstName, lastName = user2.LastName, roleId = user2.RoleId, email = user2.Email }, JsonRequestBehavior.AllowGet);
                     allUsers = allUsers + "{ firstName = " + firstName + ", lastName = " + lastName + ", roleId = " + roleId + ", email = " + email + " }";
                 }
-                return Json(new { fullUserString = allUsers }, JsonRequestBehavior.AllowGet);
+                return Json(new { allUsers }, JsonRequestBehavior.AllowGet);
             }
 
             else
